@@ -24,3 +24,16 @@ const App = () => {
     setAllTransactions(updatedTransactions);
     setFilteredTransactions(updatedTransactions);
   };
+
+  return (
+    <div>
+      <h1>Transaction Management</h1>
+      <CategoryFilter
+        categories={['All', 'Food', 'Income', 'Transportation']} 
+        handleCategoryChange={handleCategoryChange}
+      />
+      <NewTransactionForm addTransaction={addNewTransaction} />
+      <TransactionList transactions={filteredTransactions} />
+    </div>
+  );
+};
