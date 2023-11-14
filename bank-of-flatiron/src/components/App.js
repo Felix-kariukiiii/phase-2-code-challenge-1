@@ -18,3 +18,9 @@ const App = () => {
       setFilteredTransactions(filtered);
     }
   };
+
+  const addNewTransaction = (newTransaction) => {
+    const updatedTransactions = [newTransaction, ...allTransactions];
+    setAllTransactions(updatedTransactions);
+    setFilteredTransactions(updatedTransactions);
+  };
